@@ -1,25 +1,3 @@
-/*html, body {
-    height: 100%;      
-    margin: 0;    
-        color: #111;
-
-}
-body {
-    
-    
-}
-h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 20px;
-}
-
-
-
-
-
-*/
 /* Tổng thể */
 html, body {
     height: 100%;
@@ -85,6 +63,20 @@ html, body {
     border-radius: 25px;
     background-color: #111;
     color: white;
+}
+#pss_tientrinh {
+    display: none;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 50%;
+    border: 5px solid #f3f3f3; 
+    border-top: 5px solid #FFD700;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
 }
 /* Chân trang */
 #footer-section{

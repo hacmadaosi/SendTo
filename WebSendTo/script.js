@@ -7,40 +7,56 @@ const kiemtra_DinhDang = (ip) => {
     /^(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)){3}$/;
   return regex.test(ip);
 };
+const kiemtra_Rong = (ip) => {
+  return ip !== "";
+};
 const kiemtra_IP = () => {
-  const text = document.getElementById("txt_diachiip").value;
-  if (!kiemtra_DinhDang(text)) {
-    hienThiThongBao("Địa chỉ IP không hợp lệ");
+  const ip = document.getElementById("txt_diachiip").value;
+  if (!kiemtra_Rong(ip)) {
+    hienThiThongBao("Vui lòng nhập địa chỉ IP.");
     return false;
   }
-  IP_SERVER = text;
+  if (!kiemtra_DinhDang(ip)) {
+    hienThiThongBao("Địa chỉ IP không hợp lệ.");
+    return false;
+  }
+
+  IP_SERVER = ip;
   return true;
 };
 const KetNoi = () => {
-  if (kiemtra_IP()) {
-    return new WebSocket("wss://" + IP_SERVER + ":" + PORT);
-  }
-  hienThiThongBao("Thiết bị không có chung kết nối");
   return null;
 };
 
 function xuLyXuKien_KetNoi() {
   document.getElementById("lbe_thongbaoloi").style.display = "none";
-  ws = KetNoi();
-  if (ws != null) {
-    ganSuKienWebSocket();
+  if (kiemtra_IP()) {
+    document.getElementById("pss_tientrinh").style.display = "block";
+    ws = new WebSocket("wss://" + IP_SERVER + ":" + PORT);
+    if (ws != null) {
+      ganSuKienWebSocket();
+    } else {
+      document.getElementById("pss_tientrinh").style.display = "none";
+      hienThiThongBao("Thiết bị không có chung kết nối");
+    }
   }
 }
 
 function ganSuKienWebSocket() {
   ws.onopen = () => {
+    document.getElementById("pss_tientrinh").style.display = "none";
+
     alert("✅ Kết nối thành công");
   };
   ws.onerror = (err) => {
+    document.getElementById("pss_tientrinh").style.display = "none";
+
     console.error("❌ Lỗi WebSocket:", err);
     alert("❌ Lỗi:", err);
   };
   ws.onclose = () => {
+    document.getElementById("pss_tientrinh").style.display = "none";
+
     alert("⚠️ Kết nối đã đóng");
   };
   ws.onmessage = (event) => {
