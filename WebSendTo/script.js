@@ -18,7 +18,7 @@ const kiemtra_IP = () => {
 };
 const KetNoi = () => {
   if (kiemtra_IP()) {
-    return new WebSocket("ws://" + IP_SERVER + ":" + PORT);
+    return new WebSocket("wss://" + IP_SERVER + ":" + PORT);
   }
   hienThiThongBao("Thiết bị không có chung kết nối");
   return null;
