@@ -38,10 +38,10 @@ function ganSuKienWebSocket() {
   };
   ws.onerror = (err) => {
     console.error("❌ Lỗi WebSocket:", err);
-    alert("❌ Lỗi:", err);
+    console("❌ Lỗi:", err);
   };
   ws.onclose = () => {
-    alert("⚠️ Kết nối đã đóng");
+    console("⚠️ Kết nối đã đóng");
   };
   ws.onmessage = (event) => {
     console.log("📨 Nhận:", event.data);
