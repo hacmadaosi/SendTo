@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".act_TrangChu">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="26dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:text="Gửi tập tin nhanh chóng thông qua địa chỉ IP"/>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginTop="25dp"
+    android:background="@color/black"/>
+    <LinearLayout
+        android:id="@+id/llo_thongbaoketnoi"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/lbe_DiaChiIP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:text="Địa chỉ IP hiện tại:"/>
+        <TextView
+            android:id="@+id/lbe_HienThiThongBao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thiết bị chưa được khởi tạo kết nối"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Danh sách các kết nối:"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16dp" />
+        <ListView
+            android:id="@+id/lsv_HienThiKetNoi"
+            android:layout_width="match_parent"
+            android:layout_height="500px"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_KiemTraKetNoi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gold"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:text="Tạo kết nối"
+        android:textColor="@color/white" />
+
+</LinearLayout>
