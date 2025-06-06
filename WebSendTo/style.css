@@ -48,7 +48,7 @@ a {
     width: 20%;
     min-width: 200px;
     margin: auto;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #1f1f1f;
@@ -58,7 +58,7 @@ a {
 #left_content_section {
     width: 20%;
     min-width: 200px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -68,7 +68,7 @@ a {
     margin-left: 20px;
 }   
 #right_content_section{
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 80%;
     background-color: #1f1f1f;

@@ -95,7 +95,8 @@ function ganSuKienWebSocket() {
     style_Display("pss_tientrinh", "none");
     style_Color("header_lbe_ketnoi", "green");
     text_Content("header_lbe_ketnoi", "Đã kết nối");
-    style_Display("thongtin_IP", "flex");
+    style_Display("left_content_section", "flex");
+    style_Display("right_content_section", "flex");
     style_Display("center_content_section", "none");
     let seconds = 1;
     timer = setInterval(() => {
@@ -116,7 +117,8 @@ function ganSuKienWebSocket() {
       text_Content("btn_ketnoi", "Kết nối");
       style_Display("pss_tientrinh", "none");
       text_Content("time", "Thời gian kết nối:");
-      style_Display("thongtin_IP", "none");
+      style_Display("left_content_section", "none");
+      style_Display("right_content_section", "none");
       style_Display("center_content_section", "flex");
       clearInterval(timer);
       ws = null;
