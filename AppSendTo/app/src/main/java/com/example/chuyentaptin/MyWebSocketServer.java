@@ -28,6 +28,7 @@ public class MyWebSocketServer extends WebSocketServer {
 
     @Override
     public void onClose(WebSocket conn, int code, String reason, boolean remote) {
+        WebSocketHelper.getInstance().xoa_KetNoi(conn.getRemoteSocketAddress().toString());
         WebSocketHelper.getInstance().capnhat_ThongBao("Thiết bị chưa được khởi tạo kết nối");
     }
 

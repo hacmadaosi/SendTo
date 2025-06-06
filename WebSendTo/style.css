@@ -1,18 +1,33 @@
 /* Tổng thể */
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     color: white;
     background-color: black;
 }
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
 /* Tiêu đề */
-#header-section{
+#header-section {
     height: 10%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    align-items: center;
 }
 
 #header-section > h1 {
-    margin: 20px;
     font-size: 25px;
+}
+
+#header_lbe_ketnoi{
+    color: red;
+    margin: 0 5px;
 }
 
 /* Nội dung */
@@ -21,44 +36,104 @@ html, body {
     display: none;
     color: red;
     text-align: center;
-    margin-bottom: 0px;
+    margin: 10px 0 0 0;
     font-size: 16px;
 }
+
 #content-section {
     height: 80%;
     display: flex;
-    justify-content: center;  
-    align-items: center; 
+}
+#center_content_section {
+    width: 20%;
+    min-width: 200px;
+    margin: auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1f1f1f;
+    padding: 25px;
+    border-radius: 15px;
+}
+#left_content_section {
+    width: 20%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#bottom_left_content_section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}   
+#right_content_section{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: #1f1f1f;
+    margin: 0 20px;
+    border-radius: 15px;
+}
+#top_left_content_section {
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    margin-left: 20px;
+    padding: 10px 0;
+    padding-left: 20px;
+}
+#bottom_left_content_section p {
+    margin: 5px 5px 0 0;
+}
+#bottom_left_content_section h3 {
+    margin: 15px 0 5px 0;
+}
+#bottom_left_content_section a:hover {
+    color: #FFD700;
+}
+#bottom_left_content_section
+#top_left_content_section > p, button{
+    margin: 5px 0;
+}
+#btn_dongketnoi {
+    margin-left: auto;
+    padding: 0;
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin-right: 20px;
+
+}
+#btn_dongketnoi:hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
+#center_content_section > div{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+}
 #btn_ketnoi {
-    width: 30%;
+    width: 35%;
     min-width: 100px;
     padding: 10px 0;
     border-radius: 20px;
     background-color: #FFD700;
     border: 1px solid white;
     color: white;
-    margin-top: 20px;
     font-size: 14px;
 }
-
-#nhap_IP{
-    width: 20%;
-        min-width: 200px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #1f1f1f;
-    padding: 25px;
-    border-radius: 25px;
-}
-#btn_ketnoi:hover{
+#btn_ketnoi:hover {
     background-color: #111;
     cursor: pointer;
 }
-#btn_ketnoi:active{
+
+#btn_ketnoi:active {
     background-color: #FFD700;
 }
 
@@ -70,27 +145,77 @@ html, body {
     background-color: #111;
     color: white;
 }
+
 #pss_tientrinh {
     display: none;
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
     border-radius: 50%;
-    border: 5px solid #f3f3f3; 
-    border-top: 5px solid #FFD700; 
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #FFD700;
     animation: spin 1s linear infinite;
 }
+table {
+    margin: 25px  auto  auto ;
+    width: 90%;
+}
+table tr td{
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+}
+#right_content_section button {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+#right_content_section button:hover{
+    cursor: pointer;
+    color: #FFD700;
+}
+#bottom_right_content_section {
+    display: flex;
+    margin-top: auto;
+    margin-left: auto;
+}
+#top_right_content_section button{
+   background-color: #FFD700;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 15px; 
+}
+#bottom_right_content_section button {
+    background-color: #FFD700;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+#bottom_right_content_section button:hover{
+    color: #111;
+}
 @keyframes spin {
-  0% { transform: rotate(0deg);}
-  100% { transform: rotate(360deg);}
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#fileInput {
+    display: none;
 }
 /* Chân trang */
-#footer-section{
+#footer-section {
     height: 10%;
+    display: flex;
 }
 
 
-#footer-section > p {
-    text-align: center;
+#footer-section>p {
+    margin: auto;
     font-size: 14px;
 }

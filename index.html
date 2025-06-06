@@ -5,25 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="./WebSendTo/style.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <script src="./WebSendTo/script.js"></script>
     <title>Send To...</title>
 
 </head>
 <body>
-
     <div id="header-section">
         <h1>Send To...</h1>
+        <p id="header_lbe_ketnoi">Không có kết nối</p>
+
     </div>
     <div id="content-section">
-        <div id="nhap_IP">
+        <div id="left_content_section">
+            <div id="top_left_content_section">
+                <p id="ip">Thông tin IP:</p>
+                <p id="time">Thời gian kết nối:</p>
+                <button id="btn_dongketnoi" onclick="xuLyXuKien_dongKetNoi()">Đóng kết nối</button>
+            </div>
+            <div id="bottom_left_content_section">
+                <h3>Tải ứng dụng:</h3>
+                <p><a href=""><i class="fa-solid fa-download"></i></i> Liên kết ngoài</a></p>
+                <h3>Khác:</h3>
+                <p><a href="https://www.instagram.com/haizzdowncotsong/"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
+                <p><a href="https://www.facebook.com/haizzdaucotsong"><i class="fa-brands fa-square-facebook"></i> Facebook</a></p>
+            </div>
+        </div>
+        <div id="right_content_section">
+            <div id="top_right_content_section">
+                
+            </div>
+            <div id="center_right_content_section">
+            <table id="data_table" border="1">
+                <tr>
+                    <th>STT</th>
+                    <th>ID</th>
+                    <th>Tên tệp</th>
+                    <th>Kích thước</th>
+                    <th>Người gửi</th>
+                    <th>Thao tác</th>
+                </tr>               
+                <!-- <tr>
+                    <td>1</td>
+                    <td>cawasvaw.cscas</td>
+                    <td>23 Mb</td>
+                    <td>192.168.1.215</td>
+                    <td><button><i>Tải xuống</i></button>|<button><i>Xóa</i></button></td>
+                </tr> -->
+            </table>
+            </div>
+            <div id="bottom_right_content_section">
+                <button onclick="chon_File()">Thêm file...</button>
+                <input type="file" id="fileInput">
+                <button>Tải xuống tất cả</button>
+            </div>
+
+        
+        </div>
+        <div id="center_content_section">
             <input type="text" id="txt_diachiip" autocomplete="off" placeholder="Nhập địa chỉ IP trên thiết bị Android...">
             <p id="lbe_thongbaoloi">Lỗi</p>
-            <button id="btn_ketnoi" type="button" onclick="xuLyXuKien_KetNoi()"><b>Kết nối</b></button>
-            <div id="pss_tientrinh"></div>
+            <div>
+                <button id="btn_ketnoi" type="button" onclick="xuLyXuKien_KetNoi()"><b>Kết nối</b></button>
+                <div id="pss_tientrinh"></div>
+            </div>
         </div>
+
     </div>
     <div id="footer-section">
-        <p>&copy; 2025 Lê Khánh Vinh. Mọi quyền được bảo lưu.</p>
+        <p>&copy; 2025 Lê Khánh Vinh. Đây là sản phẩm cá nhân, vui lòng không sao chép khi chưa có sự cho phép.</p>
     </div>
 </body>
 </html>

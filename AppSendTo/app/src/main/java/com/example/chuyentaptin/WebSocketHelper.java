@@ -74,6 +74,12 @@ public class WebSocketHelper {
             mydapter.notifyDataSetChanged();
         });
     }
+    public void xoa_KetNoi(String client){
+        context.runOnUiThread(() -> {
+            list_DanhSachKetNoi.remove(client);
+            mydapter.notifyDataSetChanged();
+        });
+    }
     public void capnhat_ThongBao(String msg){
         context.runOnUiThread(() -> {
             lbe_HienThiThongBao.setText(msg);
